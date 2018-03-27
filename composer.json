@@ -1,0 +1,31 @@
+{
+  "name": "anilahir/omnipay-moneris",
+  "type": "library",
+  "description": "Moneris driver for the Omnipay payment processing library",
+  "keywords": [
+    "moneris",
+    "gateway",
+    "merchant",
+    "omnipay",
+    "pay",
+    "payment",
+    "payments"
+  ],
+  "homepage": "https://github.com/anilahir/omnipay-moneris",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Anil Ahir",
+      "email": "anil220.306@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": { "Omnipay\\Moneris\\" : "src/" }
+  },
+  "require": {
+    "omnipay/common": "~2.0"
+  },
+  "require-dev": {
+    "omnipay/tests": "~2.0"
+  }
+}
