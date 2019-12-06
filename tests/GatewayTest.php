@@ -1,6 +1,5 @@
 <?php
 
-
 namespace Omnipay\Moneris\Tests;
 
 use Omnipay\Moneris\Gateway;
@@ -22,7 +21,7 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('CreateCardSuccess.txt');
 
         $response = $this->gateway->createCard([
-            'card' => $this->getValidCard() + ['email' => 'user@example.com']
+            'card' => $this->getValidCard() + ['email' => 'user@example.com'],
         ])->send();
 
         $this->assertTrue($response->isSuccessful());
@@ -33,7 +32,7 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('CreateCardFailure.txt');
 
         $response = $this->gateway->createCard([
-            'card' => $this->getValidCard() + ['email' => 'user@example.com']
+            'card' => $this->getValidCard() + ['email' => 'user@example.com'],
         ])->send();
 
         $this->assertFalse($response->isSuccessful());
@@ -44,7 +43,7 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('DeleteCardSuccess.txt');
 
         $response = $this->gateway->deleteCard([
-            'cardReference' => '1234567890'
+            'cardReference' => '1234567890',
         ])->send();
 
         $this->assertTrue($response->isSuccessful());
@@ -55,22 +54,21 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('DeleteCardFailure.txt');
 
         $response = $this->gateway->deleteCard([
-            'cardReference' => '1234567890'
+            'cardReference' => '1234567890',
         ])->send();
 
         $this->assertFalse($response->isSuccessful());
     }
-
 
     public function test_authorize_success()
     {
         $this->setMockHttpResponse('AuthorizeSuccess.txt');
 
         $response = $this->gateway->authorize([
-            'orderNumber' => 'XXXX-XXXX',
+            'orderNumber'   => 'XXXX-XXXX',
             'paymentMethod' => 'payment_profile',
             'cardReference' => '1234567890',
-            'amount' => 5.00
+            'amount'        => 5.00,
         ])->send();
 
         $this->assertTrue($response->isSuccessful());
@@ -81,22 +79,21 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('AuthorizeFailure.txt');
 
         $response = $this->gateway->authorize([
-            'orderNumber' => 'XXXX-XXXX',
+            'orderNumber'   => 'XXXX-XXXX',
             'paymentMethod' => 'payment_profile',
             'cardReference' => '1234567890',
-            'amount' => 5.00
+            'amount'        => 5.00,
         ])->send();
 
         $this->assertFalse($response->isSuccessful());
     }
-
 
     public function test_capture_success()
     {
         $this->setMockHttpResponse('CaptureSuccess.txt');
 
         $response = $this->gateway->capture([
-            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>'
+            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>',
         ])->send();
 
         $this->assertTrue($response->isSuccessful());
@@ -107,22 +104,21 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('CaptureFailure.txt');
 
         $response = $this->gateway->capture([
-            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>'
+            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>',
         ])->send();
 
         $this->assertFalse($response->isSuccessful());
     }
-
 
     public function test_purchase_success()
     {
         $this->setMockHttpResponse('PurchaseSuccess.txt');
 
         $response = $this->gateway->purchase([
-            'orderNumber' => 'XXXX-XXXX',
+            'orderNumber'   => 'XXXX-XXXX',
             'paymentMethod' => 'payment_profile',
             'cardReference' => '1234567890',
-            'amount' => 5.00
+            'amount'        => 5.00,
         ])->send();
 
         $this->assertTrue($response->isSuccessful());
@@ -133,23 +129,22 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('PurchaseFailure.txt');
 
         $response = $this->gateway->purchase([
-            'orderNumber' => 'XXXX-XXXX',
+            'orderNumber'   => 'XXXX-XXXX',
             'paymentMethod' => 'payment_profile',
             'cardReference' => '1234567890',
-            'amount' => 5.00
+            'amount'        => 5.00,
         ])->send();
 
         $this->assertFalse($response->isSuccessful());
     }
-
 
     public function test_refund_success()
     {
         $this->setMockHttpResponse('RefundSuccess.txt');
 
         $response = $this->gateway->refund([
-            'amount' => 5.00,
-            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>'
+            'amount'               => 5.00,
+            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>',
         ])->send();
 
         $this->assertTrue($response->isSuccessful());
@@ -160,8 +155,8 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('RefundFailure.txt');
 
         $response = $this->gateway->refund([
-            'amount' => 5.00,
-            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>'
+            'amount'               => 5.00,
+            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>',
         ])->send();
 
         $this->assertFalse($response->isSuccessful());
@@ -172,8 +167,8 @@ class GatewayTest extends GatewayTestCase
         $this->setMockHttpResponse('InvalidApiResponse.txt');
 
         $response = $this->gateway->refund([
-            'amount' => 5.00,
-            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>'
+            'amount'               => 5.00,
+            'transactionReference' => '<?xml version="1.0" standalone="yes"?><response></response>',
         ])->send();
 
         $this->assertFalse($response->isSuccessful());

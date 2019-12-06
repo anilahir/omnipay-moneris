@@ -20,19 +20,20 @@ class AuthorizeRequestTest extends TestCase
     public function test_an_invalid_paymentMethod_should_throw_an_exception_for_the_authorize_request()
     {
         $this->request->initialize([
-            'orderNumber' => 'XXXX-XXXX',
+            'orderNumber'   => 'XXXX-XXXX',
             'paymentMethod' => 'test',
             'cardReference' => 'FAKE_CARD_REFERENCE',
-            'amount' => 5.00
+            'amount'        => 5.00,
         ]);
 
         try {
             $this->request->send();
         } catch (InvalidRequestException $e) {
             $this->assertEquals('test', $this->request->getPaymentMethod());
+
             return;
         }
 
-        $this->fail("Authorize with an invalid payment method did not throw an InvalidRequestException.");
+        $this->fail('Authorize with an invalid payment method did not throw an InvalidRequestException.');
     }
 }

@@ -70,7 +70,7 @@ abstract class AbstractRequest extends \Omnipay\Common\Message\AbstractRequest
     public function sendData($data)
     {
         $headers = [
-            'Content-Type' => 'application/xml'
+            'Content-Type' => 'application/xml',
         ];
 
         $httpResponse = $this->httpClient->request($this->getHttpMethod(), $this->getEndpoint(), $headers, $data);
