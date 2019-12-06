@@ -4,11 +4,11 @@ namespace Omnipay\Moneris\Message;
 
 use Omnipay\Common\Exception\InvalidRequestException;
 
-class RefundRequest extends AbstractRequest
+class CaptureRequest extends AbstractRequest
 {
     public function getData()
     {
-        $this->validate('amount', 'transactionReference');
+        $this->validate('transactionReference');
 
         try {
             $transactionReference = simplexml_load_string($this->getTransactionReference());
@@ -21,17 +21,17 @@ class RefundRequest extends AbstractRequest
         $request = new \SimpleXMLElement('<?xml version="1.0" encoding="utf-8"?><request></request>');
         $request->addChild('store_id', $this->getMerchantId());
         $request->addChild('api_token', $this->getMerchantKey());
-
-        $refund = $request->addChild('refund');
+    
+        $refund = $request->addChild('completion');
         $refund->addChild('order_id', $transactionReceipt->ReceiptId);
-        $refund->addChild('amount', $this->getAmount());
+        $refund->addChild('comp_amount', $transactionReceipt->TransAmount);
         $refund->addChild('txn_number', $transactionReceipt->TransID);
         $refund->addChild('crypt_type', 1);
         $refund->addChild('cust_id', $transactionReceipt->ReferenceNum);
-        $refund->addChild('dynamic_descriptor', 'Refund');
-
+        $refund->addChild('dynamic_descriptor', 'capture');
+    
         $data = $request->asXML();
-
+    
         return preg_replace('/\n/', '', $data);
     }
 }

@@ -45,24 +45,33 @@ class Gateway extends AbstractGateway
         return $this->setParameter('merchantKey', $value);
     }
 
-    public function createCard(array $parameters = array())
+    public function createCard(array $parameters = [])
     {
         return $this->createRequest('\Omnipay\Moneris\Message\CreateCardRequest', $parameters);
     }
 
-    public function deleteCard(array $parameters = array())
+    public function deleteCard(array $parameters = [])
     {
         return $this->createRequest('\Omnipay\Moneris\Message\DeleteCardRequest', $parameters);
     }
 
-    public function purchase(array $parameters = array())
+    public function purchase(array $parameters = [])
     {
         return $this->createRequest('\Omnipay\Moneris\Message\PurchaseRequest', $parameters);
     }
 
-    public function refund(array $parameters = array())
+    public function refund(array $parameters = [])
     {
         return $this->createRequest('\Omnipay\Moneris\Message\RefundRequest', $parameters);
     }
+    
+    public function authorize(array $parameters = [])
+    {
+        return $this->createRequest('\Omnipay\Moneris\Message\AuthorizeRequest', $parameters);
+    }
+    
+    public function capture(array $parameters = [])
+    {
+        return $this->createRequest('\Omnipay\Moneris\Message\CaptureRequest', $parameters);
+    }
 }
-

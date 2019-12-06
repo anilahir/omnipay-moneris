@@ -17,6 +17,6 @@ class DeleteCardRequest extends AbstractRequest
         $res_delete->addChild('data_key', $this->getCardReference());
         $data = $request->asXML();
 
-        return preg_replace('/\n/', ' ', $data);
+        return preg_replace('/\n/', '', $data);
     }
 }
