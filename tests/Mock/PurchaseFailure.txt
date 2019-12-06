@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Tue, 03 Dec 2019 13:03:46 GMT
+X-UA-Compatible: IE=Edge
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+Set-Cookie: TS019df888=015d06d25414857d2c3c461f55aeef58761d20f5f4e04e4f2e03a0f3699c0d21c7348229d4ccdfef4566e22f2c8d7ee3e9d30417b3; Path=/; Domain=.esqa.moneris.com
+Transfer-Encoding: chunked
+
+<?xml version="1.0"?><response><receipt><DataKey>4Xch45n8c1CmvwGpaNnT1aLZ2</DataKey><ReceiptId>null</ReceiptId><ReferenceNum>null</ReferenceNum><ResponseCode>null</ResponseCode><ISO>null</ISO><AuthCode>null</AuthCode><Message>The transaction was not sent to the host because of a duplicate order id</Message><TransTime>null</TransTime><TransDate>null</TransDate><TransType>null</TransType><Complete>false</Complete><TransAmount>null</TransAmount><CardType>null</CardType><TransID>null</TransID><TimedOut>false</TimedOut><CorporateCard>false</CorporateCard><RecurSuccess>null</RecurSuccess><AvsResultCode>null</AvsResultCode><CvdResultCode>null</CvdResultCode><ResSuccess>true</ResSuccess><PaymentType>cc</PaymentType><IsVisaDebit>false</IsVisaDebit><ResolveData><cust_id>john doe</cust_id><phone>NA</phone><email>john.doe@example.com</email><note>NA</note><expdate>1220</expdate><masked_pan>4242***4242</masked_pan><crypt_type>1</crypt_type><avs_street_number>NA</avs_street_number><avs_street_name>NA</avs_street_name><avs_zipcode>395000</avs_zipcode></ResolveData></receipt></response>

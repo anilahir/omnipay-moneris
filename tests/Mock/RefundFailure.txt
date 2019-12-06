@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Tue, 03 Dec 2019 13:22:56 GMT
+Content-Length: 597
+X-UA-Compatible: IE=Edge
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+Set-Cookie: TS019df888=015d06d2542435bfd083e45d5ff96d5e76a4c29c1e28fb872a84fafadcf1741f754a993d54199668492d5f44c05aef54283e11b308; Path=/; Domain=.esqa.moneris.com
+
+<?xml version="1.0" standalone="yes"?><response><receipt><ReceiptId>null</ReceiptId><ReferenceNum>null</ReferenceNum><ResponseCode>null</ResponseCode><ISO>null</ISO><AuthCode>null</AuthCode><TransTime>null</TransTime><TransDate>null</TransDate><TransType>null</TransType><Complete>false</Complete><Message>Invalid Refund Request: Check transaction type or transaction id mismatch</Message><TransAmount>null</TransAmount><CardType>null</CardType><TransID>null</TransID><TimedOut>false</TimedOut><BankTotals>null</BankTotals><Ticket>null</Ticket><IsVisaDebit>false</IsVisaDebit></receipt></response>

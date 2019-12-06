@@ -1,0 +1,10 @@
+HTTP/1.1 200 OK
+Date: Tue, 03 Dec 2019 12:31:21 GMT
+Content-Length: 603
+X-UA-Compatible: IE=Edge
+Keep-Alive: timeout=15, max=100
+Connection: Keep-Alive
+Content-Type: text/html
+Set-Cookie: TS019df888=015d06d254468f17ff81acd235401ab050a866ecc7971f7d478cd626984bbeea78405f9103c0f33363d6ace74c4c0cd8f00371b87b; Path=/; Domain=.esqa.moneris.com
+
+<?xml version="1.0" standalone="yes"?><response><receipt><ReceiptId>null</ReceiptId><ReferenceNum>null</ReferenceNum><ResponseCode>null</ResponseCode><ISO>null</ISO><AuthCode>null</AuthCode><TransTime>null</TransTime><TransDate>null</TransDate><TransType>null</TransType><Complete>false</Complete><Message>No Pre-auth corresponds to the store Id and order Id and transaction Id entered</Message><TransAmount>null</TransAmount><CardType>null</CardType><TransID>null</TransID><TimedOut>false</TimedOut><BankTotals>null</BankTotals><Ticket>null</Ticket><IsVisaDebit>false</IsVisaDebit></receipt></response>

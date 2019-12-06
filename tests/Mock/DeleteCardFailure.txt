@@ -1,0 +1,8 @@
+HTTP/1.1 200 OK
+Date: Tue, 03 Dec 2019 11:20:18 GMT
+X-UA-Compatible: IE=Edge
+Content-Type: text/html
+Set-Cookie: TS019df888=015d06d254a52fffe3871f57d5930507391af6ed0cf70714268b885b445204c2641c65a40e0129c11b62899b5f6ac0461d56b10658; Path=/; Domain=.esqa.moneris.com
+Transfer-Encoding: chunked
+
+<?xml version="1.0"?><response><receipt><DataKey>null</DataKey><ReceiptId>null</ReceiptId><ReferenceNum>null</ReferenceNum><ResponseCode>983</ResponseCode><ISO>null</ISO><AuthCode>null</AuthCode><Message>Can not find previous</Message><TransTime>null</TransTime><TransDate>null</TransDate><TransType>null</TransType><Complete>false</Complete><TransAmount>null</TransAmount><CardType>null</CardType><TransID>null</TransID><TimedOut>false</TimedOut><CorporateCard>null</CorporateCard><RecurSuccess>null</RecurSuccess><AvsResultCode>null</AvsResultCode><CvdResultCode>null</CvdResultCode><ResSuccess>false</ResSuccess><PaymentType>null</PaymentType><IsVisaDebit>null</IsVisaDebit><ResolveData>null</ResolveData></receipt></response>
