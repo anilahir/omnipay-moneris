@@ -20,12 +20,12 @@ class AbstractRequestTest extends TestCase
     public function test_get_data()
     {
         $this->request->initialize([
-            'merchant_id' => 'FAKE_MERCHANT_ID',
-            'merchant_key' => 'FAKE_MERCHANT_KEY',
-            'orderNumber' => 'DUMMY_ORDER_NUMBER',
+            'merchant_id'    => 'FAKE_MERCHANT_ID',
+            'merchant_key'   => 'FAKE_MERCHANT_KEY',
+            'orderNumber'    => 'DUMMY_ORDER_NUMBER',
             'paymentProfile' => 'FAKE_PAYMENT_PROFILE',
-            'amount' => 5.00,
-            'cardReference' => 'FAKE_CARD_REFERENCE'
+            'amount'         => 5.00,
+            'cardReference'  => 'FAKE_CARD_REFERENCE',
         ]);
 
         $this->assertEquals('FAKE_MERCHANT_ID', $this->request->getMerchantId());

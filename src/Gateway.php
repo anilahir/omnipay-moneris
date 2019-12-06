@@ -5,11 +5,11 @@ namespace Omnipay\Moneris;
 use Omnipay\Common\AbstractGateway;
 
 /**
- * Moneris Gateway
+ * Moneris Gateway.
+ *
  * @link https://esqa.moneris.com/mpg/reports/transaction/index.php
  * @link https://developer.moneris.com/en/Documentation/NA/E-Commerce%20Solutions/API/
  */
-
 class Gateway extends AbstractGateway
 {
     public function getName()
@@ -20,7 +20,7 @@ class Gateway extends AbstractGateway
     public function getDefaultParameters()
     {
         return [
-            'merchantId' => '',
+            'merchantId'  => '',
             'merchantKey' => '',
         ];
     }
@@ -64,12 +64,12 @@ class Gateway extends AbstractGateway
     {
         return $this->createRequest('\Omnipay\Moneris\Message\RefundRequest', $parameters);
     }
-    
+
     public function authorize(array $parameters = [])
     {
         return $this->createRequest('\Omnipay\Moneris\Message\AuthorizeRequest', $parameters);
     }
-    
+
     public function capture(array $parameters = [])
     {
         return $this->createRequest('\Omnipay\Moneris\Message\CaptureRequest', $parameters);

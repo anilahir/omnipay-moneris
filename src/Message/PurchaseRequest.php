@@ -25,7 +25,7 @@ class PurchaseRequest extends AbstractRequest
                 $res_purchase_cc = $request->addChild('res_purchase_cc');
                 $res_purchase_cc->addChild('data_key', $this->getCardReference());
                 $res_purchase_cc->addChild('order_id', $this->getOrderNumber());
-                $res_purchase_cc->addChild('cust_id', 'Transaction_' . $this->getOrderNumber());
+                $res_purchase_cc->addChild('cust_id', 'Transaction_'.$this->getOrderNumber());
                 $res_purchase_cc->addChild('amount', $this->getAmount());
                 $res_purchase_cc->addChild('crypt_type', 1);
 

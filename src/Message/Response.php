@@ -9,12 +9,12 @@ class Response extends AbstractResponse
     public function isSuccessful()
     {
         if ((
-                (isset($this->data->receipt->Complete) && (bool)$this->data->receipt->Complete === true) ||
-                (isset($this->data->receipt->ResSuccess) && (bool)$this->data->receipt->ResSuccess === true)
+                (isset($this->data->receipt->Complete) && (bool) $this->data->receipt->Complete === true) ||
+                (isset($this->data->receipt->ResSuccess) && (bool) $this->data->receipt->ResSuccess === true)
             ) &&
             (
                 isset($this->data->receipt->ResponseCode) && $this->data->receipt->ResponseCode != 'null' &&
-                (int) $this->data->receipt->ResponseCode >= 0  && (int) $this->data->receipt->ResponseCode <= 49
+                (int) $this->data->receipt->ResponseCode >= 0 && (int) $this->data->receipt->ResponseCode <= 49
             )
         ) {
             return true;

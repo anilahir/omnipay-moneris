@@ -20,17 +20,18 @@ class RefundRequestTest extends TestCase
     public function test_an_invalid_transaction_reference_should_throw_an_exception_for_the_refund_request()
     {
         $this->request->initialize([
-            'amount' => 5.00,
-            'transactionReference' => 'test'
+            'amount'               => 5.00,
+            'transactionReference' => 'test',
         ]);
 
         try {
             $this->request->send();
         } catch (InvalidRequestException $e) {
             $this->assertEquals('test', $this->request->getTransactionReference());
+
             return;
         }
 
-        $this->fail("Refund with an invalid transaction reference did not throw an InvalidRequestException.");
+        $this->fail('Refund with an invalid transaction reference did not throw an InvalidRequestException.');
     }
 }
