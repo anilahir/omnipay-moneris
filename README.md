@@ -2,6 +2,10 @@
 
 **Moneris driver for the Omnipay PHP payment processing library**
 
+[![Build Status](https://travis-ci.org/anilahir/omnipay-moneris.svg?branch=master)](https://travis-ci.org/anilahir/omnipay-moneris)
+[![Latest Stable Version](https://poser.pugx.org/anilahir/omnipay-moneris/v/stable)](https://packagist.org/packages/anilahir/omnipay-moneris)
+[![Total Downloads](https://poser.pugx.org/anilahir/omnipay-moneris/downloads)](https://packagist.org/packages/anilahir/omnipay-moneris)
+
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+. This package implements Moneris support for Omnipay.
 
