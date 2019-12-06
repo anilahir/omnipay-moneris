@@ -3,6 +3,7 @@
 **Moneris driver for the Omnipay PHP payment processing library**
 
 [![Build Status](https://travis-ci.org/anilahir/omnipay-moneris.svg?branch=master)](https://travis-ci.org/anilahir/omnipay-moneris)
+[![Coverage Status](https://coveralls.io/repos/github/anilahir/omnipay-moneris/badge.svg?branch=master)](https://coveralls.io/github/anilahir/omnipay-moneris?branch=master)
 [![Latest Stable Version](https://poser.pugx.org/anilahir/omnipay-moneris/v/stable)](https://packagist.org/packages/anilahir/omnipay-moneris)
 [![Total Downloads](https://poser.pugx.org/anilahir/omnipay-moneris/downloads)](https://packagist.org/packages/anilahir/omnipay-moneris)
 
