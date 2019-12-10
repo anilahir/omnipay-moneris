@@ -2,10 +2,12 @@
 
 **Moneris driver for the Omnipay PHP payment processing library**
 
-[![Build Status](https://travis-ci.org/anilahir/omnipay-moneris.svg?branch=master)](https://travis-ci.org/anilahir/omnipay-moneris)
-[![Coverage Status](https://coveralls.io/repos/github/anilahir/omnipay-moneris/badge.svg?branch=master)](https://coveralls.io/github/anilahir/omnipay-moneris?branch=master)
-[![Latest Stable Version](https://poser.pugx.org/anilahir/omnipay-moneris/v/stable)](https://packagist.org/packages/anilahir/omnipay-moneris)
-[![Total Downloads](https://poser.pugx.org/anilahir/omnipay-moneris/downloads)](https://packagist.org/packages/anilahir/omnipay-moneris)
+[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Software License][ico-license]](LICENSE.md)
+[![Build Status][ico-travis]][link-travis]
+[![Coverage Status][ico-scrutinizer]][link-scrutinizer]
+[![Quality Score][ico-code-quality]][link-code-quality]
+[![Total Downloads][ico-downloads]][link-downloads]
 
 [Omnipay](https://github.com/thephpleague/omnipay) is a framework agnostic, multi-gateway payment
 processing library for PHP 5.3+. This package implements Moneris support for Omnipay.
@@ -49,3 +51,18 @@ you can subscribe to.
 
 If you believe you have found a bug, please report it using the [GitHub issue tracker](https://github.com/anilahir/omnipay-moneris/issues),
 or better yet, fork the library and submit a pull request.
+
+[ico-version]: https://img.shields.io/packagist/v/anilahir/omnipay-moneris.svg?style=flat-square
+[ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/anilahir/omnipay-moneris/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/anilahir/omnipay-moneris.svg?style=flat-square
+[ico-coverage-status]: https://coveralls.io/repos/github/anilahir/omnipay-moneris/badge.svg?branch=master
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/anilahir/omnipay-moneris.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/anilahir/omnipay-moneris.svg?style=flat-square
+
+[link-packagist]: https://packagist.org/packages/anilahir/omnipay-moneris
+[link-travis]: https://travis-ci.org/anilahir/omnipay-moneris
+[link-scrutinizer]: https://scrutinizer-ci.com/g/anilahir/omnipay-moneris/code-structure
+[link-coverage-status]: https://coveralls.io/github/anilahir/omnipay-moneris?branch=master
+[link-code-quality]: https://scrutinizer-ci.com/g/anilahir/omnipay-moneris
+[link-downloads]: https://packagist.org/packages/anilahir/omnipay-moneris
